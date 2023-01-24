@@ -15,7 +15,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
-  
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ngrok', // Usually your GitHub org/user name.
@@ -31,6 +31,17 @@ const config = {
 
   plugins: [
     'docusaurus-plugin-hubspot',
+    ['@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          if (existingPath.includes('/docs/ngrok-link')) {
+            return [
+              existingPath.replace('/docs/ngrok-link', '/docs/cloud-edge')
+            ];
+          }
+          return undefined; // Return a falsy value: no redirect created
+        }
+      }]
   ],
 
   presets: [
@@ -60,7 +71,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        {name: 'keywords', content: 'ngrok, documentation, api, errors, reference, getting started, tutorials'}
+        { name: 'keywords', content: 'ngrok, documentation, api, errors, reference, getting started, tutorials' }
       ],
       image: 'img/ngrok-docs-opengraph.png',
       navbar: {
@@ -122,9 +133,9 @@ const config = {
         ],
       },
       algolia: {
-       appId: 'SPPRT3GDNI',
-       apiKey: 'e02fb8e0c4d8c7968396981d7ecb9fa8',
-       indexName: 'dev_ngrok',
+        appId: 'SPPRT3GDNI',
+        apiKey: 'e02fb8e0c4d8c7968396981d7ecb9fa8',
+        indexName: 'dev_ngrok',
       },
       hubspot: {
         accountId: 21124867,
