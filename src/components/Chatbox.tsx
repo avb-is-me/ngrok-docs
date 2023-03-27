@@ -38,9 +38,9 @@ function ChatBox({ messages, onSendMessage }) {
             const data = await response.json();
             console.log(data)
             const { sourceDocuments, text } = data
-            messages.push({ text: `## ${text}` })
+            messages.push({ text: `${text} \n Here is the orignal article:` })
             sourceDocuments.forEach((messageObject) => {
-                messages.push({ text: messageObject.pageContent });
+                messages.push({ text: `[Original Source](/${messageObject?.metadata?.source.split(".md")[0]}) \n ${messageObject.pageContent}` });
             });
         } catch (error) {
             console.error(error);

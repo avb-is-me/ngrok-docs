@@ -477,12 +477,11 @@ a .ngrok--card svg {
   border-radius: 10px;
   padding: 20px;
   display: flex;
+  color: white;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
 }
 
@@ -490,6 +489,7 @@ a .ngrok--card svg {
   height: 80%;
   overflow-y: scroll;
   padding: 10px;
+  color: white;
 }
 
 .chat-box__message {
@@ -497,16 +497,51 @@ a .ngrok--card svg {
   padding: 5px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
+  color: white;
 }
 
 .chat-box__input {
   width: 100%;
   height: 50px;
   padding: 10px;
+  color: white;
   border: none;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.2);
   margin-bottom: 10px;
+}
+
+ div.chat-box.show > div > div > div > p {
+  color: white;
+ }
+
+ div.chat-box.show > div > div > div > pre {
+  color: white;
+  background-color: #334155;
+  font-size: 14px !important;
+ }
+
+ div.chat-box.show > div > div > div > code {
+  color: white;
+  background-color: #334155;
+  font-size: 14px !important;
+ }
+
+ .markdown li > p {
+  color: white;
+ }
+
+ div.chat-box.show > div > div > div > ul {
+  color: white;
+ }
+
+ div.chat-box.show > div > div > div > ul > li {
+  color: white;
+ }
+
+div.chat-box.show > div > div:nth-child(2) > div > h2 > code {
+  background-color: #334155;
+  font-size: 14px !important;
 }
 
 .chat-box__button {
@@ -577,7 +612,7 @@ a .ngrok--card svg {
   border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
-  outline: none;
+  outline: solid;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
@@ -594,5 +629,5 @@ a .ngrok--card svg {
   background: linear-gradient(to right bottom,
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.1));
-  filter: blur(20px);
+  filter: blur(60px);
 }
