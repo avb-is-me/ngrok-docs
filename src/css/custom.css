@@ -477,11 +477,12 @@ a .ngrok--card svg {
   border-radius: 10px;
   padding: 20px;
   display: flex;
-  color: white;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
 }
 
@@ -583,14 +584,12 @@ div.chat-box.show > div > div:nth-child(2) > div > h2 > code {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1em;
-  z-index: 2001;
 }
 
 .toggle-button:hover {
   padding: 1em;
   cursor: pointer;
   opacity: 0.8;
-  z-index: 2001;
 }
 
 
@@ -600,7 +599,7 @@ div.chat-box.show > div > div:nth-child(2) > div > h2 > code {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   padding: 20px;
   position: relative;
-  z-index: 1;
+  z-index: 9999;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -612,7 +611,7 @@ div.chat-box.show > div > div:nth-child(2) > div > h2 > code {
   border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
-  outline: solid;
+  outline: none;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(17, 25, 40, 0.75);
@@ -629,5 +628,5 @@ div.chat-box.show > div > div:nth-child(2) > div > h2 > code {
   background: linear-gradient(to right bottom,
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.1));
-  filter: blur(60px);
+  filter: blur(20px);
 }

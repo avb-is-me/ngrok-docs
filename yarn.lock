@@ -7308,10 +7308,10 @@
   dependencies:
     "jsesc" "~0.5.0"
 
-"rehype-react@^7.1.2":
-  "integrity" "sha512-IWsFMS2M4NTbvWzumBBKhdb39ElV+r5YQHA2HafDDRrH84bEryJA2YPPNbF9he4QzAFOssaMJ9buSC6cDcJTLw=="
-  "resolved" "https://registry.npmjs.org/rehype-react/-/rehype-react-7.1.2.tgz"
-  "version" "7.1.2"
+"rehype-react@^7.2.0":
+  "integrity" "sha512-MHYyCHka+3TtzBMKtcuvVOBAbI1HrfoYA+XH9m7/rlrQQATCPwtJnPdkxKKcIGF8vc9mxqQja9r9f+FHItQeWg=="
+  "resolved" "https://registry.npmjs.org/rehype-react/-/rehype-react-7.2.0.tgz"
+  "version" "7.2.0"
   dependencies:
     "@mapbox/hast-util-table-cell-style" "^0.2.0"
     "@types/hast" "^2.0.0"
