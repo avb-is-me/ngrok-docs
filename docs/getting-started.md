@@ -5,12 +5,10 @@ title: Getting Started
 
 # Getting Started with ngrok
 --------------------------
-import ChatBox from '@site/src/components/ChatBox';
+
 
 
 This guide will get you up and running with the ngrok agent, giving you a secure way to access your local service from anywhere in the world.
-
- <ChatBox messages={[]} />
 
 We'll do this in four steps:
 
