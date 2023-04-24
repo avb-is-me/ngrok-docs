@@ -64,6 +64,11 @@ function ChatBox({ messages, onSendMessage }) {
   return (
     <div>
       <div className={`chat-box ${showChatBox ? 'show' : 'hide'}`}>
+        <div style={{width: "100%"}}>
+            <button style={{float: "right"}} onClick={() => setShowChatBox(!showChatBox)}>X</button>
+            <h3>Chat with the Ngrok-Docs 🤖</h3>
+        </div>
+        
         <div className='chat-box__messages'>
           {messages.map((message, index) => (
             <div
