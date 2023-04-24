@@ -85,7 +85,7 @@ function ChatBox({ messages, onSendMessage }) {
                 <img
                     onClick={() => setShowChatBox(!showChatBox)}
                     className="toggle-button"
-                    src="https://ngrok.com/static/img/ngrok-white.svg"
+                    src="https://logo.com/static/img/logo.svg"
                     alt="Circular button"
                 />
             </div>

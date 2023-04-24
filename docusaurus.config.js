@@ -4,8 +4,18 @@ require('dotenv').config();
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
+const visit = require('unist-util-visit');
 const docsRepo = 'https://github.com/ngrok/ngrok-docs'
+
+// const MyComponent = require('./src/components/Chatbox');
+
+// function myComponentPlugin() {
+//   return (tree) => {
+//     visit(tree, 'jsx', (node) => {
+//       node.value = `<MyComponent />\n${node.value}`;
+//     });
+//   };
+// }
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -36,6 +46,7 @@ const config = {
     'docusaurus-plugin-hubspot', 
     '@docusaurus/theme-mermaid'
   ],
+
 
   scripts: [
     {
