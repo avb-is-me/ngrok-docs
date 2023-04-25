@@ -36,7 +36,7 @@ function ChatBox({ messages, onSendMessage }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ question: message }),
+        body: JSON.stringify({ question: "in the context of ngrok: " + message }),
       });
 
       if (!response.ok) {
