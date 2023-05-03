@@ -486,6 +486,63 @@ a .ngrok--card svg {
   background-color: rgba(17, 25, 40, 0.75);
 }
 
+.chat-box-two {
+  min-width: 80ch;
+  height: 500px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .chat-box-two {
+    min-width: 100%; /* Set to 100% width for small screens */
+    height: auto; /* Adjust height to be more flexible */
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+}
+
+.centered-modal {
+  margin-top: 10em !important;
+  min-width: 20%;
+  height: fit-content;
+  z-index: 2000 !important;
+  backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.DocSearch {
+  z-index: 5000 !important;
+}
+
+ReactModal__Overlay {
+  z-index: 1000 !important;
+}
+
+.centered-modal-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80ch;
+  position: fixed;
+  top: 30%;
+  z-index: 1000;
+  left: 25%;
+  right: 25%;
+  bottom: 0;
+  overflow: scroll;
+}
+
 .chat-box__messages {
   height: 80%;
   overflow-y: scroll;
