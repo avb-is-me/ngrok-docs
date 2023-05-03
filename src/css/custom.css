@@ -503,9 +503,16 @@ a .ngrok--card svg {
 /* Mobile styles */
 @media (max-width: 768px) {
   .chat-box-two {
-    min-width: 100%; /* Set to 100% width for small screens */
-    height: auto; /* Adjust height to be more flexible */
-    padding: 10px; /* Reduce padding on smaller screens */
+    height: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
   }
 }
 
